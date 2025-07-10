@@ -8,6 +8,9 @@ public class Diamond : MonoBehaviour
     
     void Start()
     {
+        int diamondsAmount = PlayerPrefs.GetInt(diamonds, 0);
+        diamondsAmount += 1;
+        PlayerPrefs.SetInt(diamonds, diamondsAmount  );
         PlayerPrefs.SetInt(key, 1);  
         diamonds = PlayerPrefs.GetInt(key, 0);
         

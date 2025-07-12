@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -28,7 +29,6 @@ public class Diamond : MonoBehaviour
         diamondText.text = diamonds.ToString();
         Debug.Log("Алмаз взят игроком");
         Destroy(gameObject);
-        
 
     }
     

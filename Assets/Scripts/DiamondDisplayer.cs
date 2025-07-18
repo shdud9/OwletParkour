@@ -19,7 +19,7 @@ public class DiamondDisplayer : MonoBehaviour
         
     }
 
-    public void CollectCoins()
+    public void CollectDiamonds()
     {
         diamonds++;
         diamondText.text = diamonds.ToString();

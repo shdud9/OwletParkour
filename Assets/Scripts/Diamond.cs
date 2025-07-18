@@ -25,9 +25,10 @@ public class Diamond : MonoBehaviour
     { 
         diamonds = PlayerPrefs.GetInt(diamondKey, 0);
         diamonds += 1;
-        PlayerPrefs.SetInt(diamondKey,diamonds);
+        PlayerPrefs.SetInt(diamondKey, diamonds);
         diamondText.text = diamonds.ToString();
         Debug.Log("Алмаз взят игроком");
+        displayer.CollectDiamonds();
         Destroy(gameObject);
 
     }

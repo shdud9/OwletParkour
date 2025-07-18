@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Diamond : MonoBehaviour
 {
+    public DiamondDisplayer displayer;
     string diamondKey = "diamondKey";
     public TextMeshProUGUI diamondText;
     private int diamonds;

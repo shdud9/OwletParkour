@@ -16,19 +16,19 @@ public class OwletMonster : MonoBehaviour
     private void Update()
     {
         Vector2 movement = rb.linearVelocity;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || TouchButton.isLeftPressed) 
         {
              movement.x = -speed;
              transform.localScale = new Vector3 (-1, 1, 1);
         }
 
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || TouchButton.isRightPressed)
         {
              movement.x = +speed;
             transform.localScale = new Vector3(1, 1, 1);
         }
 
-        if (Input.GetKey(KeyCode.Space) && Isgrounded())
+        if ((Input.GetKeyDown(KeyCode.Space) || TouchButton.isJumpPressed) && Isgrounded())
         {
              movement.y = jumpForce;
             

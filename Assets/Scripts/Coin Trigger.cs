@@ -6,7 +6,7 @@ public class CoinTrigger : MonoBehaviour
 {
     public string coinsKey = "collectedCoins";
     
-    public TextMeshProUGUI ConsoleText;
+   
     [FormerlySerializedAs("collector")] public CoinDisplayer displayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,10 +22,9 @@ public class CoinTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         
-        string consoleText = "Монетка взята игроком(:";
-        ConsoleText.text = consoleText; 
+        
+       
         displayer.CollectCoins();
-        Debug.Log("монетка взята игроком");
         Destroy(gameObject);
         int coinsAmount = PlayerPrefs.GetInt(coinsKey, 0);
         coinsAmount += 1;

@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class OwletMonster : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioClip JumpSound;
+    public AudioSource JumpingSoundSource;
+    public AudioSource WalkingSoundSource;
     public LayerMask
         layerMask;
     public GameObject OwletPrefab;
@@ -32,16 +34,17 @@ public class OwletMonster : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || TouchButton.isJumpPressed) && Isgrounded())
         {
              movement.y = jumpForce;
+             JumpingSoundSource.PlayOneShot(JumpSound);
             
         }
         rb.linearVelocity = (movement);
         if (movement.magnitude > 0.1f && Isgrounded())
         {
-            audioSource.volume = 1f;
+            WalkingSoundSource.volume = 1f;
         }
         else
         {
-            audioSource.volume = 0f;
+            WalkingSoundSource.volume = 0f;
         }
     }
 

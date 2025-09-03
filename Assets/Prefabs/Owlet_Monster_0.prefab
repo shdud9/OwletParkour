@@ -212,8 +212,9 @@ MonoBehaviour:
   speed: 2
   number: 4
   GroundChecker: {fileID: 7593817184138801448}
-  GroundCheckRadius: 0.2
+  GroundCheckRadius: 0.15
   jumpForce: 5.5
+  MaxJumps: 2
 --- !u!82 &1930464449970997236
 AudioSource:
   m_ObjectHideFlags: 0

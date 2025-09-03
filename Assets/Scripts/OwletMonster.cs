@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class OwletMonster : MonoBehaviour
 {
+    
     public AudioClip JumpSound;
     public AudioSource JumpingSoundSource;
     public AudioSource WalkingSoundSource;
@@ -15,7 +16,8 @@ public class OwletMonster : MonoBehaviour
     public Transform GroundChecker;
     public float GroundCheckRadius; 
     public float jumpForce = 10f;
-
+    public int MaxJumps = 2;
+    private int CurrentJumps = 0;
     private void Update()
     {
         Vector2 movement = rb.linearVelocity;
@@ -31,7 +33,7 @@ public class OwletMonster : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         }
 
-        if ((Input.GetKeyDown(KeyCode.Space) || TouchButton.isJumpPressed) && Isgrounded())
+        if ((Input.GetKeyDown(KeyCode.Space) || TouchButton.isJumpPressed) && CanJump())
         {
              movement.y = jumpForce;
              JumpingSoundSource.PlayOneShot(JumpSound);
@@ -65,5 +67,27 @@ public class OwletMonster : MonoBehaviour
     {
         return Physics2D.OverlapCircle(GroundChecker.position,
             GroundCheckRadius,layerMask);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (Isgrounded())
+        {
+            CurrentJumps = 0;
+        }
+    }
+
+    private bool CanJump()
+    {
+        if (CurrentJumps < MaxJumps)
+        {
+            CurrentJumps++; 
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 }

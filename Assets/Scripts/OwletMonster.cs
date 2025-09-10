@@ -1,8 +1,12 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class OwletMonster : MonoBehaviour
 {
+    public float currentDashCD = 5f;
+    public float dashCD = 1f;
+    public float dashSpeed = 1f;
     
     public AudioClip JumpSound;
     public AudioSource JumpingSoundSource;
@@ -48,6 +52,26 @@ public class OwletMonster : MonoBehaviour
         {
             WalkingSoundSource.volume = 0f;
         }
+
+        if (Input.GetKeyDown(KeyCode.E) && currentDashCD <= 0 )
+        {
+            
+        float xInput = transform.localScale.x;
+        rb.linearVelocityX = (dashSpeed * xInput);
+        currentDashCD = dashCD;
+
+        }
+
+        if (currentDashCD < 0)
+        {
+            currentDashCD = 0; return;
+        }
+        else
+        {
+            currentDashCD -= Time.deltaTime;
+        }
+        
+        
     }
 
     private void OnDrawGizmos()

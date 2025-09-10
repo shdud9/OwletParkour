@@ -1,11 +1,16 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class TouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    public OwletMonster Player;
+    
+    public Image DashColldown;
     public enum ButtonType 
     {
-    Left, Right, Jump    
+    Left, Right, Jump, Dash   
     }
     public ButtonType buttonType;
     
@@ -37,5 +42,13 @@ public class TouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             isJumpPressed = state;
         }
+    }
+
+    private void Update()
+    {
+        if (buttonType == ButtonType.Dash)
+            
+        { DashColldown.fillAmount = Player.currentDashCD / Player.dashCD;
+        }    
     }
 }

@@ -1940,6 +1940,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1805250114378108249, guid: 0b440016888de4847995fe2afe757570, type: 3}
   m_PrefabInstance: {fileID: 1432586204}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &533213595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7855944655177721429, guid: 0b440016888de4847995fe2afe757570, type: 3}
+  m_PrefabInstance: {fileID: 1432586204}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dded235e49261744e9fe2d13f8b61ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &572690839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4260,6 +4271,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Owlet_Monster_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7855944655177721429, guid: 0b440016888de4847995fe2afe757570, type: 3}
+      propertyPath: dashCD
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7855944655177721429, guid: 0b440016888de4847995fe2afe757570, type: 3}
+      propertyPath: dashSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6103,6 +6122,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 638255845099440595, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 533213595}
+    - target: {fileID: 2352855754922909306, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 533213595}
     - target: {fileID: 2548794543306680718, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -6187,6 +6214,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8125833499669180414, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 533213595}
+    - target: {fileID: 8732106937757412093, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 533213595}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

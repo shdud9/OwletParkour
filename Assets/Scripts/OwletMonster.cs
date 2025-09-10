@@ -53,7 +53,7 @@ public class OwletMonster : MonoBehaviour
             WalkingSoundSource.volume = 0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && currentDashCD <= 0 )
+        if ((Input.GetKeyDown(KeyCode.E) || TouchButton.isDashPressed) && currentDashCD <= 0 )
         {
             
         float xInput = transform.localScale.x;

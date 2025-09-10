@@ -17,6 +17,7 @@ public class TouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public static bool isLeftPressed;
     public static bool isRightPressed;
     public static bool isJumpPressed;
+    public static bool isDashPressed;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -41,6 +42,10 @@ public class TouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         else if (buttonType == ButtonType.Jump)
         {
             isJumpPressed = state;
+        }
+        else if (buttonType == ButtonType.Dash)
+        {
+            isDashPressed = state;
         }
     }
 

@@ -2411,7 +2411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323c4579576d6fb47840fdc06e9fac87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrampoText: {fileID: 0}
 --- !u!1001 &1163755278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3322,7 +3321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323c4579576d6fb47840fdc06e9fac87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrampoText: {fileID: 0}
 --- !u!1001 &1629626630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3454,7 +3452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323c4579576d6fb47840fdc06e9fac87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrampoText: {fileID: 0}
 --- !u!1001 &1676535668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4019,14 +4016,6 @@ PrefabInstance:
     - target: {fileID: 3163047279204280308, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6256736586803141669, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
-      propertyPath: m_Name
-      value: ExitText
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916955151991407459, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
-      propertyPath: m_Name
-      value: HowToPlayText
       objectReference: {fileID: 0}
     - target: {fileID: 8125833499669180414, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
       propertyPath: Player

@@ -232,6 +232,10 @@ PrefabInstance:
       value: Owlet_Monster_0
       objectReference: {fileID: 0}
     - target: {fileID: 7855944655177721429, guid: 0b440016888de4847995fe2afe757570, type: 3}
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 2093710249}
+    - target: {fileID: 7855944655177721429, guid: 0b440016888de4847995fe2afe757570, type: 3}
       propertyPath: dashCD
       value: 5
       objectReference: {fileID: 0}
@@ -4030,6 +4034,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
+--- !u!114 &2093710249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1347634525191583726, guid: d0d28e91a24c4d54a888c6866031d91c, type: 3}
+  m_PrefabInstance: {fileID: 2093710248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a39d469c909f643a11136de19dc409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1122598863695473502
 PrefabInstance:
   m_ObjectHideFlags: 0

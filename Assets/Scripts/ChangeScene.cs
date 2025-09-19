@@ -23,9 +23,15 @@ public class ChangeScene : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             int LevelSaveInt = PlayerPrefs.GetInt(LevelSave, 1);
+            
             LevelSaveInt += 1;
+            if (LevelSaveInt > 3)
+            {
+                return;
+            }
             PlayerPrefs.SetInt(LevelSave, LevelSaveInt);
             SceneManager.LoadScene("LvL" + LevelSaveInt);
+            
             
         }
         

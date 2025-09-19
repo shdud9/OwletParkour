@@ -201,6 +201,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dded235e49261744e9fe2d13f8b61ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shop: {fileID: 0}
+  currentDashCD: 5
+  dashCD: 5
+  dashSpeed: 5
   JumpSound: {fileID: 8300000, guid: db86585ca5346e647abcbe1f63418037, type: 3}
   JumpingSoundSource: {fileID: 3402864477603222291}
   WalkingSoundSource: {fileID: 1930464449970997236}

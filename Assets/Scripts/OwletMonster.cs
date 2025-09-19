@@ -1,10 +1,11 @@
 using System;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class OwletMonster : MonoBehaviour
 {
-    public Shop shop;
+    [FormerlySerializedAs("buyDoubleJumpButton")] public Shop shop;
     public float currentDashCD = 5f;
     public float dashCD = 1f;
     public float dashSpeed = 1f;

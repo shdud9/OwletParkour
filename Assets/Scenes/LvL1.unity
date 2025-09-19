@@ -4122,14 +4122,6 @@ PrefabInstance:
       propertyPath: shop
       value: 
       objectReference: {fileID: 1519351601}
-    - target: {fileID: 7855944655177721429, guid: 0b440016888de4847995fe2afe757570, type: 3}
-      propertyPath: dashCD
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7855944655177721429, guid: 0b440016888de4847995fe2afe757570, type: 3}
-      propertyPath: dashSpeed
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OwletMonster : MonoBehaviour
 {
+    public Shop shop;
     public float currentDashCD = 5f;
     public float dashCD = 1f;
     public float dashSpeed = 1f;
@@ -22,6 +23,22 @@ public class OwletMonster : MonoBehaviour
     public float jumpForce = 10f;
     public int MaxJumps = 2;
     private int CurrentJumps = 0;
+
+    private void Awake()
+    {
+        int HaveSkill = PlayerPrefs.GetInt("isDoubleJumpBought",0);
+        if (HaveSkill == 0)
+        {
+            shop.IsDoubleJumpSkillBought = false;
+        }
+        else
+        {
+            shop.IsDoubleJumpSkillBought = true;
+        }
+    }
+    
+    
+
     private void Update()
     {
         Vector2 movement = rb.linearVelocity;
@@ -103,6 +120,15 @@ public class OwletMonster : MonoBehaviour
 
     private bool CanJump()
     {
+        if (shop.IsDoubleJumpSkillBought)
+        {
+            MaxJumps = 2;
+            
+        }
+        else
+        {
+            MaxJumps = 1;
+        }
         if (CurrentJumps < MaxJumps)
         {
             CurrentJumps++; 
@@ -112,6 +138,7 @@ public class OwletMonster : MonoBehaviour
         {
             return false;
         }
+        
 
     }
 }

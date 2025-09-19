@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CoinDisplayer : MonoBehaviour
 {
+    
     public string coinsKey = "collectedCoins";
     public TextMeshProUGUI coinText;
     private int Coins = 0;
@@ -26,5 +27,11 @@ public class CoinDisplayer : MonoBehaviour
         coinText.text = Coins.ToString();
         
         
+    }
+
+    public void UpdateCoinText()
+    {
+        Coins = PlayerPrefs.GetInt(coinsKey, 0);
+        coinText.text = Coins.ToString();
     }
 }
